@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="css\grid.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .wrapper {
+            background-color: lightblue;
+            height: 100vh;
+            padding: 10px 0px;
+        }
+
+        .wrapper h1, .form-wrapper p {
+            margin: 0;
+            text-align: center;
+        }
+
+        .form-wrapper {
+            width: 1140px;
+            margin: 10px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 2px;
+            box-shadow: 1px 1.5px 2px 1px rgb(92, 89, 89);
+        }
+
+        .form-wrapper .input-group {
+            margin: 15px 0;
+        }
+
+        .input-group .label {
+            text-align: right;
+            padding-right: 20px;
+        }
+
+        .form-control {
+            padding: 4px;
+            width: 260px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Survey Form</h1>
+        <div class="form-wrapper">
+            <form>
+                <p>Let us know how we can improve freeCodeCamp</p>
+                <div class="input-group row">
+                    <div class="col-6 label">
+                        <label for="name">* Name:</label>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" name="name" class="form-control" placeholder="Enter your name">
+                    </div>
+                </div>
+                <div class="input-group row">
+                    <div class="col-6 label">
+                        <label for="email">* Email:</label>
+                    </div>
+                    <div class="col-6">
+                        <input type="email" name="email" class="form-control" placeholder="Enter your Email">
+                    </div>
+                </div>
+                <div class="input-group row">
+                    <div class="col-6 label">
+                        <label for="age">* Age:</label>
+                    </div>
+                    <div class="col-6">
+                        <input type="number" name="age" class="form-control" placeholder="Age">
+                    </div>
+                </div>
+                <div class="input-group row">
+                    <div class="col-6 label">
+                        <label for="role">Which option best describes your current role?</label>
+                    </div>
+                    <div class="col-6">
+                        <select name="role">
+                            <option value="student">Student</option>
+                            <option value="teacher">Teacher</option>
+                            <option value="engineer">Engineer</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input-group row">
+                    <div class="col-6 label">
+                        <label for="recommend">* How likely is that you would recommend freeCodeCamp to a
+                            friend?</label>
+                    </div>
+                    <div class="col-6">
+                        <input type="radio" name="recommend"> Definitely <br>
+                        <input type="radio" name="recommend"> Maybe <br>
+                        <input type="radio" name="recommend"> Not sure
+                    </div>
+                </div>
+                <div class="input-group row">
+                    <div class="col-6 label">
+                        <label for="hobby">What do you like most in FCC:</label>
+                    </div>
+                    <div class="col-6">
+                        <select name="hobby">
+                            <option>Select an option</option>
+                            <option value="movie">Movie</option>
+                            <option value="music">Music</option>
+                            <option value="swimming">Swimming</option>
+                            <option value="dance">Dance</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input-group row">
+                    <div class="col-6 label">
+                        <label for="improvement">Things that should be improved in the future <br>(Check all that
+                            apply):</label>
+                    </div>
+                    <div class="col-6">
+                        <input type="checkbox"> Front-end Projects <br>
+                        <input type="checkbox"> Back-end Projects <br>
+                        <input type="checkbox"> Data Visualization
+                    </div>
+                </div>
+                <div class="input-group row">
+                    <div class="col-6 label">
+                        complete:
+                    </div>
+                    <div class="col-6">
+                        <input type="submit" value="submit" class="form-control">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
