@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Documentation Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            position: relative;
+            height: 100vh;
+        }
+
+        .nav {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 260px;
+            overflow: hidden;
+            border-right: 1px solid black;
+        }
+
+        .nav .nav-header {
+            padding: 0 10px;
+        }
+
+        .content {
+            margin-left: 260px;
+            padding: 20px 40px;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: black;
+            display: block;
+            padding: 10px;
+            border-bottom: 1px solid #000;
+        }
+
+        ul li:first-child {
+            border-top: 1px solid #000;
+        }
+    </style>
+
+    <script src="js\contents.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            document.addEventListener('click', (event) => {
+
+                let contentSection = document.querySelector('.content');
+
+                const element = event.target;
+
+                if (element.dataset.section != null) {
+                    let section = element.dataset.section;
+
+                    const h = document.createElement('h1');
+                    h.innerHTML = element.innerHTML;
+
+                    const p = document.createElement('p');
+                    p.innerHTML = `${contents[section ?? introduction]}`;
+
+                    contentSection.innerHTML = '';
+
+                    contentSection.appendChild(h);
+                    contentSection.appendChild(p);
+                }
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="nav">
+            <div class="nav-header">
+                <h2>JS Documentation</h2>
+            </div>
+            <ul>
+                <li>
+                    <a href="#" data-section="introduction">Introduction</a>
+                </li>
+                <li>
+                    <a href="#" data-section="about">What you should already know</a>
+                </li>
+                <li>
+                    <a href="#" data-section="javascript">Javascript and Java</a>
+                </li>
+                <li>
+                    <a href="#" data-section="hello">Hello World</a>
+                </li>
+                <li>
+                    <a href="#" data-section="variables">Variables</a>
+                </li>
+                <li>
+                    <a href="#" data-section="declaration">Declaring variables</a>
+                </li>
+                <li>
+                    <a href="#" data-section="scope">Variable scope</a>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>Introduction</h1>
+
+            <p>JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with
+                first-class functions. While it is most well-known as the scripting language for Web pages, many
+                non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a
+                prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented,
+                imperative, and declarative (e.g. functional programming) styles. Read more about JavaScript.
+
+                This section is dedicated to the JavaScript language itself, and not the parts that are specific to Web
+                pages or other host environments. For information about API specifics to Web pages, please see Web APIs
+                and DOM.
+
+                The standard for JavaScript is ECMAScript. As of 2012, all modern browsers fully support ECMAScript 5.1.
+                Older browsers support at least ECMAScript 3. On June 17, 2015, ECMA International published the sixth
+                major version of ECMAScript, which is officially called ECMAScript 2015, and was initially referred to
+                as ECMAScript 6 or ES6. Since then, ECMAScript standards are on yearly release cycles. This
+                documentation refers to the latest draft version, which is currently ECMAScript 2020.
+
+                Do not confuse JavaScript with the Java programming language. Both "Java" and "JavaScript" are
+                trademarks or registered trademarks of Oracle in the U.S. and other countries. However, the two
+                programming languages have a very different syntax, semantic, and use.</p>
+        </div>
+    </div>
+</body>
+
+</html>
